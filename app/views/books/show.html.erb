@@ -1,4 +1,7 @@
-<%= render 'new', book: @book, user: @user %>
+<div class="container px-5 px-sm-0">
+  <div class="row">
+
+<%= render 'new', book: @new_book, user: @user %>
 
 
 <div class="col-md-8 offset-md-1">
@@ -8,7 +11,8 @@
       <td>
         <%= link_to user_path(@book.user_id) do %>
         <!--ここに画像を入れる-->
-        <%= image_tag user.get_profile_image(100,100) %>
+        <%= image_tag @user.get_profile_image(100,100) %>
+
         <br><%= User.find(@book.user_id).name %>
         <% end %>
       </td>
@@ -20,5 +24,7 @@
       <% end %>
     </tr>
   </table>
+</div>
+</div>
 </div>
 
