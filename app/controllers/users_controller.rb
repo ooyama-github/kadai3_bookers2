@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     @book=Book.new
     @books=@user.books
   end
-  
+
   # @user=@book.user
 
  def edit
